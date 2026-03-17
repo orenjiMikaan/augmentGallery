@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latent-gallery"
+version = "0.1.0"
+description = "Config-driven BYOL augmentation study on CIFAR-10"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "torch",
+  "torchvision",
+  "numpy",
+  "pyyaml",
+  "tqdm",
+  "pandas",
+  "scikit-learn",
+  "matplotlib",
+  "seaborn",
+  "umap-learn",
+]
+
+[tool.setuptools]
+packages = ["src"]
+
