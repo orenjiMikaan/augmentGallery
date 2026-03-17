@@ -1,0 +1,10 @@
+base: configs/base.yaml
+augmentation_id: 92
+augmentations:
+  random_crop: true
+  flip: false
+  color_jitter: true
+  blur: true
+  rotation: true
+  solarize: false
+  cutout: false
