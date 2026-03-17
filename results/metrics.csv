@@ -1,0 +1,2 @@
+augmentation_id,num_augs,augmentations,linear_probe_acc,train_loss_final,train_time_sec,avg_epoch_time,random_crop,flip,color_jitter,blur,rotation,solarize,cutout
+1,1,crop,nan,0.7151035666465759,51.77697700000135,25.75103390001459,1,0,0,0,0,0,0
