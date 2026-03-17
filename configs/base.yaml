@@ -1,0 +1,41 @@
+seed: 42
+device: auto   # auto|cpu|cuda
+
+data:
+  dataset: cifar10
+  data_dir: .data
+  num_workers: 2
+  batch_size: 256
+  eval_batch_size: 512
+
+training:
+  epochs: 100
+  lr: 0.2
+  weight_decay: 0.000001
+  ema_tau: 0.996
+  save_epochs: [1, 10, 25, 50, 100]   # for temporal embedding export
+  log_every_n_steps: 10
+
+model:
+  backbone: resnet9
+  proj_dim: 256
+  pred_hidden_dim: 512
+  proj_hidden_dim: 512
+
+augmentations:
+  random_crop: true
+  flip: true
+  color_jitter: true
+  blur: false
+  rotation: false
+  solarize: false
+  cutout: false
+
+evaluation:
+  linear_probe:
+    epochs: 30
+    lr: 0.1
+    weight_decay: 0.0
+
+results:
+  root_dir: results
